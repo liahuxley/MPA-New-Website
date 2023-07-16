@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home - MPA Theatre</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/stylesheet.css">
+  </head>
+<body class="page">
+    <!-- Header -->
+    <header class="p-3 mb-3 border-bottom">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <div class="logotop">
+            <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+              <div class="headerlogo">
+                <img src="images/mpatransparent.png" alt="MPA Logo" height="40">
+              </div>
+            </a>
+          </div>
+          <div class="pagemenu">
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2 link-secondary text-white">Home</a></li>
+              <li><a href="about.html" class="nav-link px-2 link-secondary text-white">About</a></li>
+              <li><a href="shows.html" class="nav-link px-2 link-secondary text-white">Shows</a></li>
+              <li><a href="awards.html" class="nav-link px-2 link-secondary text-white">Awards</a></li>
+              <li><a href="" class="nav-link px-2 link-secondary text-white">Membership</a></li>
+              <li><a href="" class="nav-link px-2 link-secondary text-white">Hire</a></li>
+              <li><a href="contact.html" class="nav-link px-2 link-secondary text-white">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Current Show -->
+      <div class="px-4 pt-5 my-5 text-center">
+        <h1 class="display-4 fw-bold text-white">Current Show:</h1>
+        <h3 class="display-6 fw-bold text-white">Twisted the Musical</h3>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead col-8 mx-auto text-white-50">Please note this production is not suitable for children. There is frequent use of coarse language and sexual references.</p>
+          <button id="home_buytickets" type="button" class="btn btn-secondary btn-lg px-4">Purchase Tickets</button>
+        </div>
+        <img class="d-block mx-auto mb-4 p-4" src="images/frontcover.png" alt="Twisted Cover Poster" height="500px">
+      </div>
+
+    <!-- Upcoming Shows -->
+    <div class="px-4 pt-5 my-5 text-center">
+      <h3 class="display-6 fw-bold text-white">Upcoming Shows:</h3>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead col-8 mx-auto text-white-50">All Shook Up - October/November 2023</p>
+      </div>
+      <img class="d-block mx-auto mb-4 p-4" src="images/asuposter.jpg" alt="All Shook Up Cover Poster" height="500px">
+    </div>
+
+  <!-- Footer -->
+  <div class="footercont" class="container">
+    <footer class="pt-4 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+        <li><a href="about.html" class="nav-link px-2 link-secondary">About</a></li>
+        <li><a href="shows.html" class="nav-link px-2 link-secondary">Shows</a></li>
+        <li><a href="awards.html" class="nav-link px-2 link-secondary">Awards</a></li>
+        <li><a href="" class="nav-link px-2 link-secondary">Membership</a></li>
+        <li><a href="" class="nav-link px-2 link-secondary">Hire</a></li>
+        <li><a href="contact.html" class="nav-link px-2 link-secondary">Contact</a></li>
+      </ul>
+      <p class="text-center text-secondary">Created by Liam Huxley</p>
+    </footer>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+  function openInNewTab(href) {
+    Object.assign(document.createElement('a'), {
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      href: href,
+    }).click();
+  }
+
+  document.getElementById("home_buytickets").onclick = function () {
+    var win = window.open("https://www.iticket.co.nz/events/2023/jul/twisted", '_blank');
+    win.focus();
+  };
+  
+</script>
