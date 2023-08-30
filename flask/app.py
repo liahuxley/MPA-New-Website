@@ -27,6 +27,30 @@ def index():
             result = cursor.fetchall()
     return render_template("index.html", result=result)
 
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        with create_connection() as connection:
+            with connection.cursor() as cursor:
+                sql = """SELECT * FROM users
+                    WHERE email = %s AND password = %s"""
+                values = (
+                    request.form["email"],
+                    encrypt(request.form["password"])
+                )
+                cursor.execute(sql, values)
+                result = cursor.fetchone()
+        if result:
+            session["logged_in"] = True
+            session["id"] = result["id"]
+            session["first_name"] = result["first_name"]
+            session["role"] = result["role"]
+            return redirect("/")
+        else:
+            flash("Wrong username or password!")
+            return redirect("/login")
+    return render_template("login.html")
+
 @app.route("/about")
 def about():
     with create_connection() as connection:
@@ -40,7 +64,7 @@ def about():
 def shows():
     with create_connection() as connection:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM users"
+            sql = "SELECT * FROM shows"
             cursor.execute(sql)
             result = cursor.fetchall()
     return render_template("shows.html", result=result)
@@ -49,7 +73,7 @@ def shows():
 def awards():
     with create_connection() as connection:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM users"
+            sql = "SELECT * FROM awards"
             cursor.execute(sql)
             result = cursor.fetchall()
     return render_template("awards.html", result=result)
@@ -63,4 +87,5 @@ def contact():
             result = cursor.fetchall()
     return render_template("contact.html", result=result)
 
-app.run(debug=False)
+if __name__ == '__main__':
+    app.run(debug=True, port=8001)
