@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Awards - MPA Theatre</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/styles/stylesheet.css">
-  </head>
-<body class="page">
-    <!-- Header -->
-    <header class="p-3 mb-3 border-bottom">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <div class="logotop">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-              <div class="headerlogo">
-                <img src="static/images/mpatransparent.png" alt="MPA Logo" height="40">
-              </div>
-            </a>
-          </div>
-          <div class="pagemenu">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 link-secondary text-white">Home</a></li>
-              <li><a href="/about" class="nav-link px-2 link-secondary text-white">About</a></li>
-              <li><a href="/shows" class="nav-link px-2 link-secondary text-white">Shows</a></li>
-              <li><a href="/awards" class="nav-link px-2 link-secondary text-white">Awards</a></li>
-              <li><a href="" class="nav-link px-2 link-secondary text-white">Membership</a></li>
-              <li><a href="" class="nav-link px-2 link-secondary text-white">Hire</a></li>
-              <li><a href="/contact" class="nav-link px-2 link-secondary text-white">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
+{% extends "layout.html" %}
+{% block title %}
+Awards
+{% endblock %}
+{% block content %}
 
     <!-- Awards -->
     <div class="container">
@@ -66,3 +35,5 @@
   </div>
 
 </body>
+
+{% endblock %}

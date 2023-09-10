@@ -21,13 +21,6 @@
     float:left;
 }
 
-/* ------Home------ */
-
-/* Current Show*/
-
-/* Upcoming Shows*/
-
-
 /* ------Contact----- */
 
 #formbox {
@@ -41,4 +34,9 @@
 
 .page {
     background-color: black;
+}
+
+/* ------Login/Signup----- */
+.small-item {
+    min-height: 600px;
 }

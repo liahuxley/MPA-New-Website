@@ -1,44 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Contact - MPA Theatre</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/styles/stylesheet.css">
-  </head>
+{% extends "layout.html" %}
+{% block title %}
+Contact
+{% endblock %}
+{% block content %}
 <body class="page">
-    <!-- Header -->
-    <header class="p-3 mb-3 border-bottom">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <div class="logotop">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-              <div class="headerlogo">
-                <img src="static/images/mpatransparent.png" alt="MPA Logo" height="40">
-              </div>
-            </a>
-          </div>
-          <div class="pagemenu">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="/" class="nav-link px-2 link-secondary text-white">Home</a></li>
-              <li><a href="/about" class="nav-link px-2 link-secondary text-white">About</a></li>
-              <li><a href="/shows" class="nav-link px-2 link-secondary text-white">Shows</a></li>
-              <li><a href="/awards" class="nav-link px-2 link-secondary text-white">Awards</a></li>
-              <li><a href="" class="nav-link px-2 link-secondary text-white">Membership</a></li>
-              <li><a href="" class="nav-link px-2 link-secondary text-white">Hire</a></li>
-              <li><a href="/contact" class="nav-link px-2 link-secondary text-white">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
-
-
     <form class="p-5" action="https://formsubmit.co/liahuxley@student.pakuranga.school.nz" method="POST">
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="http://127.0.0.1:8001/">
+      <input type="hidden" name="_next" value="http://127.0.0.1:8001/contactsucessful">
       <!-- Name input -->
       <div class="form-outline mb-4">
         <label class="form-label text-white" for="form4Example1">Full Name</label>
@@ -63,33 +31,9 @@
         <textarea name="message" id="formbox" class="form-control text-white" id="form4Example3" rows="4"></textarea>
       </div>
     
-      <!-- Checkbox -->
-      <div class="form-check d-flex justify-content-center mb-4">
-        <input id="formbox" class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-        <label class="form-check-label bg-dark text-white-50" for="form4Example4">
-          Send me a copy of this message
-        </label>
-      </div>
-    
       <!-- Submit button -->
       <button type="submit" class="btn btn-secondary btn-lg px-4 text-white">Send</button>
     </form>
  </form>
 
-  <!-- Footer -->
-  <div class="footercont" class="container">
-    <footer class="pt-4 my-4">
-      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li><a href="/" class="nav-link px-2 link-secondary text-white">Home</a></li>
-        <li><a href="/about" class="nav-link px-2 link-secondary text-white">About</a></li>
-        <li><a href="/shows" class="nav-link px-2 link-secondary text-white">Shows</a></li>
-        <li><a href="/awards" class="nav-link px-2 link-secondary text-white">Awards</a></li>
-        <li><a href="" class="nav-link px-2 link-secondary text-white">Membership</a></li>
-        <li><a href="" class="nav-link px-2 link-secondary text-white">Hire</a></li>
-        <li><a href="/contact" class="nav-link px-2 link-secondary text-white">Contact</a></li>
-      </ul>
-      <p class="text-center text-secondary">Created by DOLOS Production Technologies</p>
-    </footer>
-  </div>
-
-</body>
+{% endblock %}

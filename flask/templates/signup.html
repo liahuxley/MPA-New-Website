@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}
+Signup
+{% endblock %}
+{% block content %}
+
+<body class="page">
+    <div class="small-item">
+        <form class="d-flex flex-column align-items-center w-25 p-5 m-auto" method="POST">
+            <!-- First name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label text-white" for="form4Example1">First Name</label>
+                <input name="first_name" id="formbox" type="text" id="form4Example1" class="form-control text-white" />
+            </div>
+
+            <!-- Last name input -->
+            <div class="form-outline mb-4">
+                <label class="form-label text-white" for="form4Example1">Last Name</label>
+                <input name="last_name" id="formbox" type="text" id="form4Example1" class="form-control text-white" />
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+            <label class="form-label text-white" for="form4Example1">Email</label>
+            <input name="email" id="formbox" type="email" id="form4Example1" class="form-control text-white" />
+            </div>
+        
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+            <label class="form-label text-white" for="form4Example2">Password</label>
+            <input name="email" id="formbox" type="password" id="form4Example2" class="form-control text-white" />
+            </div>
+        
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-secondary btn-lg px-4 text-white">Sign up</button>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
