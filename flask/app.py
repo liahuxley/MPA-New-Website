@@ -54,6 +54,15 @@ def awards():
             result = cursor.fetchall()
     return render_template("awards.html", result=result)
 
+@app.route("/membership")
+def membership():
+    with create_connection() as connection:
+        with connection.cursor() as cursor:
+            sql = "SELECT * FROM awards"
+            cursor.execute(sql)
+            result = cursor.fetchall()
+    return render_template("membership.html", result=result)
+
 @app.route("/contact")
 def contact():
     with create_connection() as connection:
@@ -67,7 +76,7 @@ def contact():
 def contactsucessful():
     with create_connection() as connection:
         with connection.cursor() as cursor:
-            sql = "SELECT * FROM users"
+            sql = "SELECT * FROM awards"
             cursor.execute(sql)
             result = cursor.fetchall()
     return render_template("contactsucessful.html", result=result)
